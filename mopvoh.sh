@@ -1,7 +1,8 @@
 #! /usr/bin/bash
 # Tue 16 Jan 2024 01:45:52 PM EST 
 name="My Own Personal Version Of Hell"
-version="0.2024.02.05.10:20"
+version="0.2024.02.05.13:26
+"
 #
 # Installs docker as part of sane.
 #

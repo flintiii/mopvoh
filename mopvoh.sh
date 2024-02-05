@@ -25,11 +25,12 @@ cat $0 | grep '^## ' | sed -e 's/##//'
 ##  - flink/flunk- Patches or removes argumment to current user path.
 ##  - bupdate    - update packages and backup package file.
 ## Linux Containers (LXC)
+##  - lxc-create <NAME> creates a dicker instance.
 ##  - lxc-update - updates your git repository.
 ## Python
 ##  - inspy24    - installs python 2.4 on current system.
 ## Zope
-##  - inszp21    - installs correct version of python on current system.
+##  - inszp21    - installs 2.10 version of python on current system.
 ## Data
 ##  - dupdate    - update Data.fs locally
 ##  - tpiclle    - tests Data.fs locally
@@ -44,11 +45,26 @@ echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
 } # Test: mopvoh.sh dummy
 #
+#
+function lxc-create(){
+#* function lxc-create - creates a dicker instance with NAME
+echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
+uroot
+} # Test: mopvoh.sh lxc-create
+#
+
+#
 function lxc-update(){
 #* function lxc-update - updates your git repository.
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
 } # Test: mopvoh.sh lxc-update
+#
+function inszp21(){
+#* function inszp21 -  installs zope on current system.
+echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
+uroot
+} # Test: mopvoh.sh inszp21
 #
 function inspy24(){
 #* function inspy24 -  installs python 2.4 on current system.
@@ -498,9 +514,10 @@ if [ "$#" -eq "1" ] && [ "$1" = "bufrusb"     ]; then ARGS="1"; fi
 if [ "$#" -eq "1" ] && [ "$1" = "setalias"    ]; then ARGS="1"; fi
 if [ "$#" -eq "1" ] && [ "$1" = "bookmarks"   ]; then ARGS="1"; fi
 if [ "$#" -eq "1" ] && [ "$1" = "dummy"       ]; then ARGS="1"; fi
+if [ "$#" -eq "2" ] && [ "$1" = "lxc-create"       ]; then ARGS="2"; fi
 if [ "$#" -eq "1" ] && [ "$1" = "lxc-update"       ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "inspy24.sh"       ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "inszp21.sh"       ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "inspy24"       ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "inszp21"       ]; then ARGS="1"; fi
 if [ "$#" -eq "1" ] && [ "$1" = "dupdate"       ]; then ARGS="1"; fi
 if [ "$#" -eq "1" ] && [ "$1" = "tpiclle"       ]; then ARGS="1"; fi
 if [ "$#" -eq "1" ] && [ "$1" = "uroot"       ]; then ARGS="1"; fi
@@ -520,7 +537,7 @@ case "$ARGS" in
     "4") var4=$4; var3=$3; var2=$2;  $1 ;;          # run the command with three arguments
     "5") prompt=$2; $1 ;;   # run the command with a different argument
     "6") time=$3; prompt=$2;  $1 ;;     # run the command with two different arguments
-    "7") flint_short_vita_2017-07-01.odtdefvbl; $1 ;;           # run the command and default variables
+    "7") $1 ;;           # run the command and default variables
     "8") var2=$2;  $1 ;;    # run the command and settle variables
     "9") var3=$3; var2=$2;  $1 ;;       # run the command and settle variables
     "9") var3=$3; var2=$2;  $1 ;;       # run the command and settle variables

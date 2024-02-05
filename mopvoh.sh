@@ -1,6 +1,7 @@
 #! /usr/bin/bash
 # Tue 16 Jan 2024 01:45:52 PM EST 
 name="My Own Personal Version Of Hell"
+pname="mopvoh.sh"
 version="0.2024.02.05.13:26
 "
 #
